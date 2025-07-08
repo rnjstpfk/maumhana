@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+}
+
+/* header */
+.header {
+  background: #f74d66;
+  height: 80px;
+  position: relative;
+  z-index: 1000;
+}
+
+.wrap {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+.logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1001;
+}
+.logo img{width: 100px; height: 100px;}
+
+/* GNB 메뉴 */
+
+.gnb > ul {
+  display: flex;
+  gap: 10px;
+}
+
+.gnb > ul > li {
+  position: relative;
+  height: 90px;
+}
+
+.gnb > ul > li > a {
+  display: block;
+  padding: 40px 10px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* 서브메뉴 배경 */
+.submenu-wrapper {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 0;
+  width: 100vw;
+  background: #ffffff;
+  padding: 20px 0;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* 서브메뉴 컨텐츠 */
+.submenu-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 0 16px;
+}
+
+.submenu-inner a {
+  padding: 10px 20px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+/* hover 시 서브메뉴 보이기 */
+.gnb > ul > li:hover .submenu-wrapper {
+  display: block;
+}
+
+/* 메뉴 hover 스타일 */
+.submenu-inner a:hover {
+  color: #f74d66;
+  font-weight: bold;
+}
+
+/* 오른쪽 네비 */
+.rightnav {
+  display: flex;
+  gap: 10px;
+}
+
+.search{
+    border: 1px solid #000;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    background: url(../img/ico_search_b.svg) no-repeat;
+    background-size: 21px 21px;
+}
+
+.login{
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 60px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+.playlist{
+    border: 1px solid #000;
+    border-radius: 20px;
+    width: 90px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: #f74d66;
+    background: #000;
+}
