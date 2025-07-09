@@ -135,3 +135,408 @@ body {
     color: #f74d66;
     background: #000;
 }
+
+
+/* 햄버거 버튼 기본 상태 */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1002;
+}
+
+.hamburger span {
+  display: block;
+  height: 2px;
+  background: #000;
+  border-radius: 2px;
+}
+
+/* 햄버거 X 만들기 */
+.hamburger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -5px);
+}
+.hamburger span {
+  transition: all 0.3s ease;
+}
+
+/* 모바일 메뉴 초기 숨김 */
+.gnb.mobile-active > ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 320px;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999;
+  padding: 20px;
+}
+
+.gnb.mobile-active > ul > li {
+  border-bottom: 1px solid #eee;
+  margin-bottom: 20px;
+}
+.gnb.mobile-active > ul > li > a {
+  color: #999;
+}
+
+.gnb.mobile-active .submenu-wrapper {
+  position: static;
+  display: block;
+  box-shadow: none;
+  padding: 10px;
+}
+
+/* 햄버거 메뉴 */
+.m_show {
+  display: none; /* 기본은 숨김 */
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #f74d66;
+  z-index: 999;
+  padding: 20px;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.m_show.active {
+  display: block;
+  opacity: 1;
+  pointer-events: auto;
+}
+.before_login {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 가운데 정렬 */
+  text-align: center; /* 텍스트 가운데 정렬 */
+}
+
+.profile{margin-bottom: 30px;}
+.profile img{width: 90px; height: 90px;}
+.before_login p{font-size: 20px; margin-bottom: 30px;}
+
+.login_m{
+  font-weight: 500;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 3px 10px;
+  margin-right: 10px;
+}
+.playlist_m{
+  font-weight: 500;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 3px 10px;
+}
+.gap10{margin-bottom: 30px;}
+
+
+
+
+
+.section1{
+  background: #e7e7e7;
+  height: auto;
+  height: 10000px;
+}
+
+.wrap1{text-align: center;}
+.wrap1 h2{
+  padding-top: 50px;
+  font-size: 21px;
+  font-weight: 700;
+  color: #f74d66;
+}
+.wrap1 h3{
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: 800;
+}
+.wrap1 p{
+  padding-top: 30px;
+  font-size: 18px;
+  line-height: 135%;
+  font-weight: 300;
+}
+
+.messageForm{text-align: center; margin: 50px;}
+.messageForm .talkwire{
+  width: 590px;
+  height: 80px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  padding: 0 50px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.talkwire::placeholder {
+  color: #999; /* 원하는 색상으로 바꿔줘! 예: 회색 */
+  opacity: 1; /* 사파리 브라우저에서 흐리게 나오는 거 방지 */
+}
+.messageForm .talkwire1{
+  width: 250px;
+  height: 80px;
+  border: none;
+  border-radius: 40px;
+  background: #f74d66;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+}
+
+
+.talk_list{position: relative; max-width: 1600px; margin: 0 auto;}
+.talk {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2%; /* 여백 줄게! */
+  justify-content: center;
+}
+.talk a {
+  display: block;
+  width: 32%; /* 3개씩! */
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: 0.3s;
+}
+
+.clamp1{
+  font-size: 21px;
+  font-weight: 700;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;       /* 👉 딱 1줄만! */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.dp_f {
+  display: flex;
+  align-items: center;
+}
+
+.gap20 {
+  gap: 5px; /* flex-gap으로 간격 주기 */
+}
+
+.mt_10 {
+  margin-top: 10px;
+}
+.tag {
+  background: rgb(252, 216, 222);
+  color: #f74d66;
+  font-size: 12px;
+  padding: 0 8px;
+  border-radius: 5px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin-bottom: 30px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 6px; /* 텍스트랑 이미지 사이 약간 떨어지게 */
+  font-size: 14px;
+  color: #555;
+  margin-left: 10px;
+}
+
+.profile img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%; /* 둥글게 */
+}
+
+.desc {
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.4; /* 20% 말고 1.4배 정도로 여유 주기 */
+  height: 60px;      /* 내용이 2줄 정도 들어갈 높이로 늘리기 */
+  overflow: hidden;
+  white-space: normal;
+}
+
+
+/* 아이콘 */
+.con_view {
+  display: flex;
+  gap: 30px;
+  border-top: 1px dotted #ddd;
+  margin: 10px 0 0;   /* 아래 마진 없애고 위쪽만 줌 */
+  padding-top: 10px;  /* 선과 아이콘 사이에 공간 주기 */
+}
+
+
+/* 보러가기 버튼 */
+.btn_wrap {
+  text-align: center;
+  margin-top: 40px; /* 위에 간격 여유 주고 싶으면! */
+}
+
+.b_btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 40px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 1;
+  background: #000000;
+  color: #ffffff;
+}
+.b_btn:hover{
+  background: #f74d66;
+  border: 1px solid #f74d66;
+  transition: background-color .2s ease-in-out, border-color .2s ease-in-out;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .gnb > ul {
+      display: none;
+    }
+
+    .logo {
+      position: absolute;
+      left: 80px;
+      z-index: 1001;
+    }
+
+    .login{
+      display: none;
+    }
+    .playlist{
+      display: none;
+    }
+    .search{
+      border: none;
+      margin-right: 50px;
+      background-size: 30px;
+      height: 34px;
+      width: 34px;
+    }
+
+    .hamburger {
+    display: flex;
+    margin-right: -80px;
+    margin-top: 6px;
+  }
+  .m_show{display: block; z-index: 99999;}
+
+
+  .gnb.mobile-active::after {
+  content: "";
+  position: absolute;
+  bottom: -900px;  /* 메뉴 하단에 붙게 */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 167px;
+  height: 35px;
+  background: url(../img/menu_logo.svg) no-repeat center/contain;
+  z-index: 99999999;
+}
+
+
+/* section1 */
+.wrap1 h2{
+  font-size: 14px;
+}
+.wrap1 h3{
+  font-size: 20px;
+}
+.wrap1 p{
+  font-size: 14px;
+}
+
+.messageForm {
+  display: flex;
+  align-items: center; /* 세로 가운데 정렬 */
+  gap: 8px; /* 입력창이랑 버튼 사이 간격 */
+}
+
+.messageForm .talkwire{
+  width: 520px;
+  height: 36px;
+  border: none;
+  border-radius: 40px;
+  box-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+  padding: 0 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.messageForm .talkwire1{
+  width: 36px;
+  height: 36px;
+  background: #f74d66 url(../img/ico_write_w.svg) no-repeat center/16px;
+}
+.m_hide{display: none;}
+
+
+  .talk a {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .talk {
+    gap: 10px; /* 간격 넉넉하게 */
+    padding: 0 30px; /* 좌우 여백 살짝 */
+  }
+.desc {
+  font-size: 14px !important;
+  letter-spacing: 1px !important;
+  line-height: 1.4 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  height: auto !important;
+}
+
+
+
+
+  .tag {
+    margin-bottom: 29px;
+  }
+  
+}
+
+
+
+@media screen and (max-width: 1024px) {
+  .talk a {
+    width: 100%;
+  }
+}
