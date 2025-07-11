@@ -17,21 +17,27 @@ body {
 
 /* header */
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: #f74d66;
   height: 80px;
-  position: relative;
   z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-.wrap {
-  max-width: 1410px;
+/* 🧡 헤더 내부 내용 위치가 깨지지 않게 */
+.header .wrap {
+  max-width: 1200px; /* 네가 쓰던 고정 너비로 설정 */
   margin: 0 auto;
-  padding: 0 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
+
 .logo {
   position: absolute;
   left: 50%;
@@ -279,6 +285,7 @@ body.menu-open {
   background: #e7e7e7;
   height: auto;
   height: auto;
+  margin-top: 80px;
 }
 
 .wrap1{text-align: center;}
@@ -567,7 +574,7 @@ body.menu-open {
 }
 .con_inner .con_txt{
   font-size: 24px;
-  font-weight: 900;
+  font-weight: 800;
   color: #f74d66;
   margin-top: 60px;
   padding: 20px;
@@ -575,8 +582,8 @@ body.menu-open {
   text-align: center;
 }
 .con_inner .con_txt1{
-  font-size: 36px;
-  font-weight: 700;
+  font-size: 26px;
+  font-weight: 600;
   text-align: center;
 }
 .inner_txt3 {
@@ -653,11 +660,12 @@ body.menu-open {
 
 .con_ing h4{
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
   padding: 20px 0;
+  letter-spacing: -3.3px;
 }
 .txt_over{
-  font-size: 24px;
+  font-size: 20px;
 }
 .hits{
   background: url(../img/ico_hits.svg) no-repeat center center;
@@ -668,6 +676,105 @@ body.menu-open {
 .con_view span{position: absolute; left: 30px; top: 15px;}
 
 
+/* section4 */
+.section4:not(.bd_0){border-bottom: 1px solid #ababab; height: 1000px;}
+.section4{
+  padding: 100px 0;
+}
+.section4 .con_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* 양쪽 여백 살짝! */
+}
+
+
+
+/* section5 */
+.section5{
+  padding: 100px 0;
+}
+
+
+/* newsletter */
+.newsletter{
+  background: #f74d66;
+  text-align: center;
+  padding: 100px 0;
+  position: relative;
+}
+.newsletter::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: url(../img/newsletter_deco.svg) no-repeat center / cover;
+  width: 1229px;
+  height: 184px;
+  /* z-index: 999; */
+  pointer-events: none;
+}
+.newsletter .news_inner span{
+  font-size: 24px;
+}
+.newsletter .news_inner .N_inner{
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.newsletter a{
+  display: inline-block;
+  margin-top: 40px;
+  font-size: 24px;
+  border: 1px solid #000;
+  border-radius: 42px;
+  padding: 10px 33px;
+  transition: background-color .2s ease-in-out, color .2s ease-in-out;
+}
+.newsletter a:hover{
+  background: #000;
+  color: #fff;
+}
+
+
+/* footer */
+.footer{
+  background: #000;
+  color: #fff;
+  height: 255px;
+  padding: 50px 0;
+}
+
+.footer_inner{
+  margin: 0 auto;
+  max-width: 1240px;
+  width: 1226px;
+}
+.footer_inner .inner_left{
+  -webkit-box-align: center;
+  align-items: center;
+  display: flex;
+}
+.footer_inner .inner_left .left_img{
+  opacity: calc(7 / 10) !important;
+  gap: 12px !important;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+.footer_inner .inner_left .desc{}
+.footer_inner .inner_left .desc .txtTop{}
+.footer_inner .inner_left .desc .txtTop .mt_10{}
+.footer_inner .inner_right{}
+.footer_inner .inner_right .rightTop{}
+.footer_inner .inner_right .rightTop .ft_youtube{}
+.footer_inner .inner_right .rightTop .ft_instagram{}
+.footer_inner .inner_right .dp_f{}
+.footer_inner .inner_right .dp_f .ft_link{}
+.footer_inner .inner_right .right_bottom{}
+.footer_inner .inner_right .right_bottom .ft_link2{}
+.footer_inner .inner_right .md_mt_30{}
+.footer_inner .inner_right .md_mt_30 .ft_copy{}
+.footer_inner .inner_right .md_mt_30 .ft_text{}
 
 
 
@@ -725,7 +832,7 @@ body.menu-open {
   }
 
   .gnb.mobile-active > ul {
-    top: 270px;
+    top: 80px;
     height: 100vh;
 
   }
@@ -881,6 +988,51 @@ body.menu-open {
   margin-top: 30px;
   font-size: 14px;
 }
+
+
+/* section3 */
+.con_inner .con_txt{
+  font-size: 14px;
+  padding: 10px;
+}
+.con_inner .con_txt1{
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.inner_txt3 {
+  text-align: center;
+}
+.inner_txt3 > a {
+  font-size: 14px;
+  padding-bottom: 1px;
+  margin-top: 20px;
+}
+ /* 기본적으로 모든 슬라이드 숨김 */
+  .swiper-slide {
+    display: none !important;
+  }
+  /* 첫 번째 슬라이드만 보임 */
+  .swiper-slide:first-child {
+    display: block !important;
+    width: 100% !important; /* 가로 꽉 채우기 */
+  }
+
+
+  .con_ing h4{
+  font-size: 14px;
+  letter-spacing: -1px;
+}
+.txt_over{
+  font-size: 14px;
+}
+.hits{
+  background: url(../img/ico_hits.svg) no-repeat center center;
+  width: 24px;
+  height: 24px;
+}
+.con_view{position: relative;}
+.con_view span{position: absolute; left: 30px; top: 15px;}
 
 }
 
